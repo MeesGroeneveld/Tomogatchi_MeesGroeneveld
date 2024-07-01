@@ -8,16 +8,15 @@ let progresBarProgres = 0;
 //milo heeft me geholpen met de progresbar, ik heb video's opgezocht over arrays deze heeft het best gehlopen https://www.youtube.com/watch?v=yQ1fz8LY354
 function progresBar() {
     const images = ["images/progressbar0.png","images/progresbar1.png", "images/progresbar2.png", "images/progresbar3.png", "images/progresbar4.png", "images/progresbar5.png", "images/progresbar6.png", "images/progresbar7.png"];
-    
+    //het zorgt ervoor dat progressesBarProgres groter is dan of gelijk is aan 0 en kleiner is dan de lengte van de afbeeldingenarray.
+    if (progresBarProgres >= 0 && progresBarProgres < images.length) {
+        l.src = images[progresBarProgres];
+    }    
     if (progresBarProgres < 0) {
         progresBarProgres = 0;
     }
     if (progresBarProgres > 8) {
         progresBarProgres = 7;
-    }
-    //het zorgt ervoor dat progressesBarProgres groter is dan of gelijk is aan 0 en kleiner is dan de lengte van de afbeeldingenarray.
-    if (progresBarProgres >= 0 && progresBarProgres < images.length) {
-        l.src = images[progresBarProgres];
     }
 }
 
@@ -45,7 +44,7 @@ function changeimage2() {
     document.querySelector('p').textContent = "haha so silly";
     randomizeChange();
     progresBar();
-    if (progresBarProgres === 8) {
+    if (progresBarProgres === 7) {
         win();
     }
 }
@@ -55,7 +54,7 @@ function changeimage3() {
     document.querySelector('p').textContent = "wow so pretty!";
     randomizeChange();
     progresBar();
-    if (progresBarProgres === 8) {
+    if (progresBarProgres === 7) {
         win();
     }
 }
@@ -65,7 +64,7 @@ function changeimage4() {
     document.querySelector('p').textContent = "that hits the spot";
     randomizeChange();
     progresBar();
-    if (progresBarProgres === 8) {
+    if (progresBarProgres === 7) {
         win();
     }
 }
@@ -73,7 +72,7 @@ function changeimage4() {
 function changeimage0() {
     document.getElementById("img1").src = "images/normal.png";
     document.querySelector('p').textContent = "what choice will you make";
-    if (progresBarProgres === 8) {
+    if (progresBarProgres === 7) {
         win();
     }
 }
